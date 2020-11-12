@@ -1,0 +1,16 @@
+{
+  "name": "jejuserver",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "doyon",
+  "license": "MIT",
+  "scripts": {
+    "server": "node ./server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^1.0.6",
+    "mysql2": "^2.2.5"
+  }
+}

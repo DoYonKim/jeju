@@ -13,6 +13,8 @@ https://medium.com/@bdv111/aws-ec2%EC%97%90%EC%84%9C-nginx%EB%A1%9C-react-%EC%95
 
 ### client
 * http://52.79.237.69:3000
+* pm2 start npm -- start
 
 ### server
 * http://52.79.237.69:3001/api
+* pm2 start server.js

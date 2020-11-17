@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import styled from "styled-components";
 
 import LogoSection from "./LogoSction"
-import ConditionToggleSection from './ConditionToggleSection'
-
+import ConditionToggleConatiner from './ConditionToggleContainer'
+import SearchByLocationSection from './SearchByLocationSection'
 
 class LeftMainContainer extends Component {
     render() {
         return (
             <LeftMainContainerDiv>
                 <LogoSection/>
-                <ConditionToggleSection/>
+                <ConditionToggleConatiner/>
+                <SearchByLocationSection/>
            </LeftMainContainerDiv>
         );
     }

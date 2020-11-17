@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 
+import DayListSection from './DayListSection';
+import CardListSection from './CardListSection'
+
 class CenterMainContainer extends Component {
     render() {
         return (
             <CenterMainContainerDiv>
-                센터 메인 컨테이너입니다.
+                <DayListSection/>
+                <CardListSection/>
             </CenterMainContainerDiv>
         );
     }

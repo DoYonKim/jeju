@@ -22,3 +22,6 @@ https://medium.com/@bdv111/aws-ec2%EC%97%90%EC%84%9C-nginx%EB%A1%9C-react-%EC%95
 
 ### 호스팅에 도움이 된 블로그
 * https://velog.io/@pinot/AWS-Ubuntu%EB%A1%9C-nginx-reverse-proxy-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0
+
+### 터미널 접속
+* ssh -i jeju.pem ubuntu@52.79.160.44 

@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 
-class ConditionToggleSection extends Component {
+class SearchByLocationSection extends Component {
     render() {
         return (
-            <ToggleList>
+            <LoctionSecton>
+                <h2>장소별로 보기</h2>
                 <button>버튼1</button>
                 <button>버튼1</button>
                 <button>버튼1</button>
                 <button>버튼1</button>
                 <button>버튼1</button>
-            </ToggleList>
+            </LoctionSecton>
         );
     }
 }
 
-const ToggleList = styled.div`
-background-color: yellow;
+const LoctionSecton = styled.div`
+background-color: violet;
 display: flex;
 flex-direction: column;
 width: 100%;
 height: 100%;
 `;
 
-export default ConditionToggleSection;
+export default SearchByLocationSection;

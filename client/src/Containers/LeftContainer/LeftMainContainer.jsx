@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 
+import LogoSection from "./LogoSction"
+import ConditionToggleSection from './ConditionToggleSection'
+
 
 class LeftMainContainer extends Component {
     render() {
         return (
             <LeftMainContainerDiv>
-                레프트 메인 컨테이너입니다.
-            </LeftMainContainerDiv>
+                <LogoSection/>
+                <ConditionToggleSection/>
+           </LeftMainContainerDiv>
         );
     }
 }
 
 const LeftMainContainerDiv = styled.div`
-background-color: green;
 display: flex;
 flex-direction: column;
 width: 25%;

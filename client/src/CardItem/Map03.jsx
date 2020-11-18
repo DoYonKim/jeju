@@ -16,7 +16,7 @@ class Map03 extends Component {
 
         script.onload = () => {
             kakao.maps.load(() => {
-                let container = document.getElementById(this.state.location);
+                let container = document.getElementById(this.props.location);
                 let options = {
                     center: new kakao.maps.LatLng(33.387141837922634, 126.56413842811448),
                     level: 11

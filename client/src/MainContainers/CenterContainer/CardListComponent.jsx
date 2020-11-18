@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import styled from "styled-components";
+import Map03 from '../../CardItem/Map03'
 
 class CardListComponent extends Component {
     render() {
@@ -9,6 +10,7 @@ class CardListComponent extends Component {
 
         return (
             <OneComponent>
+                <Map03 location = {location}/>
                 <p>주소: {location}<br/>사진: {pics}<br/>내용: {comments}</p>
             </OneComponent>
         );

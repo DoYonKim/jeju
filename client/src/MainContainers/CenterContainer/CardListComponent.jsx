@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import styled from "styled-components";
+
 import Map03 from '../../CardItem/Map03'
+import Review from '../../CardItem/Review03'
 
 class CardListComponent extends Component {
     render() {
@@ -11,7 +13,7 @@ class CardListComponent extends Component {
         return (
             <OneComponent>
                 <Map03 location = {location}/>
-                <p>주소: {location}<br/>사진: {pics}<br/>내용: {comments}</p>
+                <Review title = {pics} stars = "별다섯개" location = "제주도 서귀포시 강서구 마곡나루역 근처" contents = "comments"/>
             </OneComponent>
         );
     }
@@ -25,12 +27,12 @@ CardListComponent.propTypes = {
 };
 
 const OneComponent = styled.div`
-    margin: 10px;
-    padding: 20px;
-    color: #fff;
+    margin: 5px;
+    padding: 0px;
+    color: black;
     text-align: center;
     border-radius: 5px;
-    background: #4584b1;
+    background:white;
 
     display: flex;
     flex-direction: row;

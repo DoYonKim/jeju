@@ -31,11 +31,14 @@ const OneComponent = styled.div`
     padding: 0px;
     color: black;
     text-align: center;
-    border-radius: 5px;
     background:white;
 
     display: flex;
     flex-direction: row;
+
+    border: 1px solid rgba(228, 228, 228, 0.6);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
 `;
 
 export default CardListComponent;

@@ -11,6 +11,7 @@ var connection = mysql.createConnection({
   database : 'jeju'         // mysql 데이터베이스
 });
 connection.connect();
+
 connection.query('SELECT * from test', 
 function (error, results, fields) {
   if (error) {
@@ -19,6 +20,7 @@ function (error, results, fields) {
   console.log(results);
   result = results;
 });
+
 connection.end();
 
 

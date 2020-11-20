@@ -13,7 +13,7 @@ class CardListComponent extends Component {
         return (
             <OneComponent>
                 <Map03 location = {location}/>
-                <Review title = {pics} stars = "별다섯개" location = "제주도 서귀포시 강서구 마곡나루역 근처" contents = "comments"/>
+                <Review title = {pics} stars = "별다섯개" location = "제주도 서귀포시 강서구 마곡나루역 근처" contents = {comments}/>
             </OneComponent>
         );
     }

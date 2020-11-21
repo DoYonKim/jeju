@@ -31,5 +31,20 @@ router.get('/testInsert', function(req,res){
   });
 })
 
+router.get('/getMap', function(req,res){
+
+    var query = "SELECT id as cardId, contents1 as locationX, contents2 as locationY from jeju.card where id = '36'";
+        connection.query(query, 
+    function (error, results, fields) {
+    if (error) {
+        console.log(error);
+    };
+    console.log(results);
+    res.json(results);
+    });
+    
+    
+
+  })
 
 module.exports = router;

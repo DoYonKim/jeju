@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import styled from "styled-components";
 
 import DayListSection from './DayListSection';
-import CardListSection from './CardListSection'
+import CardHolderListSection from './CardHolderListSection'
 
 class CenterMainContainer extends Component {
     render() {
         return (
             <CenterMainContainerDiv>
                 <DayListSection/>
-                <CardListSection/>
+                <CardHolderListSection/>
             </CenterMainContainerDiv>
         );
     }

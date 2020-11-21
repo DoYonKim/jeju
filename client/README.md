@@ -1,3 +1,15 @@
+## CARD attribute 사용 방식
+
+#### MAP03
+* id: Auto increment 값
+* style: map03
+* date: 시간 없는 날자정보
+* categoory: cafe/restaurant/tourspot/others 중 하나
+* location: 남원/성읍/성산/온평 등 지명 정보
+* contents2: 지도상 x 좌표 (경도 - 구글맵에서 사용 가능)
+* contnets3: 지도상 y 좌표 (위도)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

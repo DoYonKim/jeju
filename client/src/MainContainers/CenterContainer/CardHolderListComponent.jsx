@@ -7,12 +7,14 @@ import Map03 from '../../CardItem/Map03'
 import Review from '../../CardItem/Review03'
 
 class CardListComponent extends Component {
+
+
     render() {
         const { location, pics, comments } = this.props;
 
         return (
             <OneComponent>
-                <Map03 location = {location}/>
+                <Map03 cardID/>
                 <Review title = {pics} stars = "별다섯개" location = "제주도 서귀포시 강서구 마곡나루역 근처" contents = {comments}/>
             </OneComponent>
         );

@@ -17,3 +17,10 @@ CREATE TABLE jeju.card (
     timestamp datetime DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id)
 )
+
+;
+create table jeju.cardholder(
+	holderId int not null,
+    cardId int not null,
+PRIMARY KEY(holderId, cardId)
+);

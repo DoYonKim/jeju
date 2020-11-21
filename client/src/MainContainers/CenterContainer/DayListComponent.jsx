@@ -5,8 +5,8 @@ class DayListComponent extends Component {
     render() {
         return (
             <OneComponent>
-                <p>Day 1</p>
-                <p>10월 31일</p>
+                <P>Day 1</P>
+                <P>10월 31일</P>
             </OneComponent>
         );
     }
@@ -43,6 +43,11 @@ const OneComponent = styled.div`
     /* Secondary/Dark Grey */
 
     color: #484848;
+    `;
+
+    const P = styled.div`
+     margin-left: 10px;
+     margin-top: 10px;
     `;
 
 export default DayListComponent;

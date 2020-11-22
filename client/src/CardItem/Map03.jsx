@@ -24,7 +24,7 @@ class Map03 extends Component {
 
         script.onload = () => {
             kakao.maps.load(() => {
-                let container = document.getElementById(this.state.post[0].locationX);
+                let container = document.getElementById(this.state.post[0].cardId);
                 let options = {
                     center: new kakao.maps.LatLng(
                         33.387141837922634,
@@ -67,7 +67,7 @@ class Map03 extends Component {
         var isMapLoad = (this.state.post.length>0);
         if(isMapLoad){
             return (
-                <Item id={this.state.post[0].locationX} />
+                <Item id={this.state.post[0].cardId} />
                 )
         }else{
             return (

@@ -31,9 +31,9 @@ router.get('/testInsert', function(req,res){
   });
 })
 
-router.get('/getMap', function(req,res){
+router.post('/getMap', function(req,res){
 
-    var query = "SELECT id as cardId, contents1 as locationX, contents2 as locationY from jeju.card where id = '36'";
+    var query = "SELECT id as cardId, contents1 as locationX, contents2 as locationY from jeju.card where id = '" + req.body.cardId + "'";
         connection.query(query, 
     function (error, results, fields) {
     if (error) {
@@ -42,9 +42,6 @@ router.get('/getMap', function(req,res){
     console.log(results);
     res.json(results);
     });
-    
-    
-
   })
 
 module.exports = router;

@@ -55,7 +55,18 @@ class Map03 extends Component {
         }
     }
     componentDidMount(){
-        fetch("http://localhost:3001/api/getMap")
+
+        console.log(this.props.id);
+        fetch("http://localhost:3001/api/getMap", {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            },
+            body: JSON.stringify({
+              cardId: this.props.id
+            })
+            
+            })
             .then(res => res.json())
             .then(data => this.setState({post: data}));
     }

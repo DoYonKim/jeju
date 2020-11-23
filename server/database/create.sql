@@ -1,26 +1,25 @@
-CREATE TABLE jeju.card (
-    id int NOT NULL auto_increment,
-    type varchar(10) DEFAULT NULL,
-    category varchar(20) DEFAULT NULL,
-    date date DEFAULT NULL,
-    location varchar(20) DEFAULT NULL,
-    contents1 text DEFAULT NULL,
-    contents2 text DEFAULT NULL,
-    contents3 text DEFAULT NULL,
-    contents4 text DEFAULT NULL,
-    contents5 text DEFAULT NULL,
-    contents6 text DEFAULT NULL,
-    contents7 text DEFAULT NULL,
-    contents8 text DEFAULT NULL,
-    contents9 text DEFAULT NULL,
-    contents text DEFAULT NULL,
-    timestamp datetime DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (id)
-)
+CREATE TABLE `jeju`.`cardHolder` (
+  `card_holder_id` INT NOT NULL auto_increment,
+  `card_holder_date` DATE NULL,
+  `card_holder_category` VARCHAR(50) NULL,
+  `card_holder_location` VARCHAR(100) NULL,
+  PRIMARY KEY (`card_holder_id`));
 
-;
-create table jeju.cardholder(
-	holderId int not null,
-    cardId int not null,
-PRIMARY KEY(holderId, cardId)
-);
+
+  CREATE TABLE `jeju`.`card` (
+  `card_id` INT NOT NULL AUTO_INCREMENT,
+  `card_holder_id` INT NOT NULL,
+  `card_order` INT NULL,
+  `card_type` VARCHAR(45) NULL,
+  `card_contents_1` text NULL,
+  `card_contents_2` text NULL,
+  `card_contents_3` text NULL,
+  `card_contents_4` text NULL,
+  `card_contents_5` text NULL,
+  `card_contents_6` text NULL,
+  `card_contents_7` text NULL,
+  `card_contents_8` text NULL,
+  `card_contents_9` text NULL,
+  `card_contents_10` text NULL,
+  PRIMARY KEY (`card_id`),
+  FOREIGN KEY (`card_holder_id`) REFERENCES cardHolder(`card_holder_id`));

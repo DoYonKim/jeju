@@ -31,17 +31,20 @@ router.get('/testInsert', function(req,res){
   });
 })
 
-router.post('/getMap', function(req,res){
+router.post("/getMAP03Data", function (req, res) {
+    var query =
+        "select card.card_id as cardId, card.card_contents_1 as locationX, card.card_contents_2 as locationY from jeju.card card, jeju.cardHolder holder where card.card_holder_id = holder.card_holder_id and card.card_type = 'MAP03' and holder.card_holder_id =" +
+        req.body.cardId +
+        " order by card.card_order asc";
 
-    var query = "SELECT id as cardId, contents1 as locationX, contents2 as locationY from jeju.card where id = '" + req.body.cardId + "'";
-        connection.query(query, 
-    function (error, results, fields) {
-    if (error) {
-        console.log(error);
-    };
-    console.log(results);
-    res.json(results);
+    //var query = "SELECT id as cardId, contents1 as locationX, contents2 as locationY from jeju.card where id = '" + req.body.cardId + "'";
+    connection.query(query, function (error, results, fields) {
+        if (error) {
+            console.log(error);
+        }
+        console.log(results);
+        res.json(results);
     });
-  })
+});
 
 module.exports = router;

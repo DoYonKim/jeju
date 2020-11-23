@@ -16,7 +16,7 @@ class CardListComponent extends Component {
             <OneComponent>
                 <Map03  id = "1"/>
                 <Review id = "1"/>
-            </OneComponent>
+            </OneComponent> 
         );
     }
 }

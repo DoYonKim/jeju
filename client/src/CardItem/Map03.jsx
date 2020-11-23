@@ -87,17 +87,16 @@ class Map03 extends Component {
     }
 }
 
+Map03.propTypes = {
+    id: PropTypes.string,
+};
+
 const Item = styled.div`
     margin: 10px;
     padding: 20px;
-    text-align: center;
     border-radius: 5px;
     width: 390px;
     height: 200px;
 `;
-
-Map03.propTypes = {
-    id: PropTypes.string,
-};
 
 export default Map03;

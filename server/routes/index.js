@@ -47,4 +47,20 @@ router.post("/getMAP03Data", function (req, res) {
     });
 });
 
+router.post("/getREVIEW03Data", function (req, res) {
+  var query =
+      "select card.card_id as cardId, card.card_contents_1 as title, card.card_contents_2 as stars, card.card_contents_3 as location, card.card_contents_4 as contents from jeju.card card, jeju.cardHolder holder where card.card_holder_id = holder.card_holder_id and card.card_type = 'REVIEW03' and holder.card_holder_id =" +
+      req.body.cardId +
+      " order by card.card_order asc";
+
+  //var query = "SELECT id as cardId, contents1 as locationX, contents2 as locationY from jeju.card where id = '" + req.body.cardId + "'";
+  connection.query(query, function (error, results, fields) {
+      if (error) {
+          console.log(error);
+      }
+      console.log(results);
+      res.json(results);
+  });
+});
+
 module.exports = router;

@@ -24,7 +24,7 @@ const CardList = styled.div`
 background-color: yellow;
 display: flex;
 flex-direction: column;
-width: 70%;
+width: 100%;
 
 flex-direction: column;
 flex-wrap: nowrap;

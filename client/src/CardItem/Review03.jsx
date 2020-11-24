@@ -13,7 +13,7 @@ class Review03 extends Component {
     
     componentDidMount(){
 
-        fetch("http://localhost:3001/api/getREVIEW03Data", {
+        fetch("http://52.79.160.44:3001/api/getREVIEW03Data", {
             method: "POST",
             headers: {
                 "Content-type": "application/json; charset=UTF-8"

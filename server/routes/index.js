@@ -63,4 +63,29 @@ router.post("/getREVIEW03Data", function (req, res) {
   });
 });
 
+router.post("/getCardHoderIdByCondition", function (req, res) {
+    
+    var query = "select card_holder_id as cardHolderID from jeju.cardHolder where 1=1 ";
+    
+    if(req.body.date != ""){
+        query = query + "and card_holder_date = '" + req.body.date + "' ";
+    }
+    if(req.body.category != ""){
+        query = query + "and card_holder_category = '" + req.body.category + "' ";
+    }
+    if(req.body.location != ""){
+        query = query + "and card_holder_location = '" + req.body.location + "' ";
+    }
+
+    query = query + "order by card_holder_id asc"
+
+    connection.query(query, function (error, results, fields) {
+        if (error) {
+            console.log(error);
+        }
+        console.log(results);
+        res.json(results);
+    });
+  });
+
 module.exports = router;

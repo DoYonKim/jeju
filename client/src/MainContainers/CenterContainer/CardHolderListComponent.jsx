@@ -8,14 +8,15 @@ import Review from '../../CardItem/Review03'
 
 class CardListComponent extends Component {
 
+    //to do: card 테이블에서 card_order에 따라 배열되는 기능 추가하기
 
     render() {
-        const { location, pics, comments } = this.props;
+        const { cardHolderId } = this.props;
 
         return (
             <OneComponent>
-                <Map03  id = "1"/>
-                <Review id = "1"/>
+                <Map03  id = {this.props.cardHolderId}/>
+                <Review id = {this.props.cardHolderId}/>
             </OneComponent> 
         );
     }
@@ -23,9 +24,7 @@ class CardListComponent extends Component {
 
 CardListComponent.propTypes = {
 
-    location: PropTypes.string,
-    pics: PropTypes.string,
-    comments: PropTypes.string,
+    cardHolderId: PropTypes.string,
 };
 
 const OneComponent = styled.div`

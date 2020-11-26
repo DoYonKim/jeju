@@ -37,3 +37,12 @@ https://medium.com/@bdv111/aws-ec2%EC%97%90%EC%84%9C-nginx%EB%A1%9C-react-%EC%95
 * Section: 의미로 구분되는 기능 영역의 구분
 * Component: List를 구성하는 단위
 * item: Compoenent나 Section을 구현하는데 필요한 더 작은 단위
+
+### mysql 한글 입력도 안될때 
+* https://all-record.tistory.com/183
+* 며칠을 헤멘 후 위 링크를 보고 재설치를 했다..
+* 아니다 이걸봐라
+* https://www.lesstif.com/dbms/mysql-rhel-centos-ubuntu-20775198.html
+
+### ec2 접속
+* ssh -i jeju.pem ubuntu@52.79.160.44 

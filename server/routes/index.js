@@ -48,6 +48,7 @@ router.post("/getMAP03Data", function (req, res) {
         if (error) {
             console.log(error);
         }
+        console.log("getMAP03Data");
         console.log(results);
         res.json(results);
     });
@@ -64,6 +65,7 @@ router.post("/getREVIEW03Data", function (req, res) {
       if (error) {
           console.log(error);
       }
+      console.log("getREVIEW03Data");
       console.log(results);
       res.json(results);
   });
@@ -89,6 +91,7 @@ router.post("/getCardHoderIdByCondition", function (req, res) {
         if (error) {
             console.log(error);
         }
+        console.log("getCardHoderIdByCondition");
         console.log(results);
         res.json(results);
     });

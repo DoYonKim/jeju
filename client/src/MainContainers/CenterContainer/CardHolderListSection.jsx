@@ -15,8 +15,9 @@ class CardHolderListSection extends Component {
 
     componentDidMount(){
 
-        fetch("http://52.79.160.44:3001/api/getCardHoderIdByCondition", {
+        
         //fetch("http://localhost:3001/api/getCardHoderIdByCondition", {
+            fetch("http://52.79.160.44:3001/api/getCardHoderIdByCondition", {
             method: "POST",
             headers: {
                 "Content-type": "application/json; charset=UTF-8"

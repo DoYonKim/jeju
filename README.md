@@ -46,3 +46,5 @@ https://medium.com/@bdv111/aws-ec2%EC%97%90%EC%84%9C-nginx%EB%A1%9C-react-%EC%95
 
 ### ec2 접속
 * ssh -i jeju.pem ubuntu@52.79.160.44 
+
+### ssl 설정 완료

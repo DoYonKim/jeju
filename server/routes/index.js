@@ -4,8 +4,8 @@ const router = express.Router();
 var mysql      = require('mysql2');
 var connection = mysql.createConnection({
   host     : 'localhost',    // 호스트 주소
-  user     : 'root',           // mysql user
-  password : '1234',       // mysql password
+  user     : 'jUser',           // mysql user
+  password : 'jeju50days.com',       // mysql password
   database : 'jeju'         // mysql 데이터베이스
 });
 

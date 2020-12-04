@@ -56,8 +56,9 @@ class Map03 extends Component {
     }
     componentDidMount(){
 
+        console.log(this.props.id);
         fetch("http://52.79.160.44:3001/api/getMAP03Data", {
-        // fetch("http://localhost:3001/api/getMAP03Data", {
+        //fetch("http://localhost:3001/api/getMAP03Data", {
             method: "POST",
             headers: {
                 "Content-type": "application/json; charset=UTF-8"

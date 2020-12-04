@@ -24,8 +24,9 @@ class Review03 extends Component {
             })
             
             })
-            .then(res => res.json())
-            .then(data => this.setState({post: data}));
+            .then(res=>console.log(res.json()));
+            // .then(res => res.json())
+            // .then(data => this.setState({post: data}));
     }
 
     render() {

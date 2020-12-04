@@ -6,7 +6,12 @@ var connection = mysql.createConnection({
   host     : 'localhost',    // 호스트 주소
   user     : 'jUser',           // mysql user
   password : 'jeju50days.com',       // mysql password
-  database : 'jeju'         // mysql 데이터베이스
+  database : 'jeju',         // mysql 데이터베이스
+  ssl      : {
+    ca   : fs.readFileSync('/home/ubuntu/newcerts/ca.pem'), // should be enough for AWS
+    key  : fs.readFileSync('/home/ubuntu/newcerts/client-key.pem'), // required for google mysql cloud db
+    cert : fs.readFileSync('/home/ubuntu/newcerts/client-cert.pem'), // required for google mysql cloud db
+}
 });
 
 

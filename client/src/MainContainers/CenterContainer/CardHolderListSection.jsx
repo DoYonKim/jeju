@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styled from "styled-components";
 
 import CardListComponent from './CardHolderListComponent'
+import * as Constants from "../../Constants";
+
 
 class CardHolderListSection extends Component {
 
@@ -16,8 +18,7 @@ class CardHolderListSection extends Component {
     componentDidMount(){
 
         
-        //fetch("http://localhost:3001/api/getCardHoderIdByCondition", {
-            fetch("http://52.79.160.44:3001/api/getCardHoderIdByCondition", {
+        fetch(Constants.SERVER_URL  + "/api/getCardHoderIdByCondition", {
             method: "POST",
             headers: {
                 "Content-type": "application/json; charset=UTF-8"

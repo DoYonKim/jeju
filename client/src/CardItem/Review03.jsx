@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from "styled-components";
-
+import * as Constants from "../Constants";
 class Review03 extends Component {
     
     constructor(props){
@@ -13,8 +13,7 @@ class Review03 extends Component {
     
     componentDidMount(){
 
-        // fetch("http://localhost:3001/api/getREVIEW03Data", {
-        fetch("http://52.79.160.44:3001/api/getREVIEW03Data", {
+        fetch(Constants.SERVER_URL + "/api/getREVIEW03Data", {
             method: "POST",
             headers: {
                 "Content-type": "application/json; charset=UTF-8"
@@ -24,9 +23,8 @@ class Review03 extends Component {
             })
             
             })
-            .then(res=>console.log(res.json()));
-            // .then(res => res.json())
-            // .then(data => this.setState({post: data}));
+            .then(res => res.json())
+            .then(data => this.setState({post: data}));
     }
 
     render() {

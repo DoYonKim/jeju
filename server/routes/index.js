@@ -4,17 +4,30 @@ const router = express.Router();
 require('dotenv').config();
 var mysql      = require('mysql2');
 
-var connection = mysql.createConnection({
-  host     : process.env.DB_HOST,    // 호스트 주소
-  user     : process.env.DB_USER,           // mysql user
-  password : process.env.DB_PASS,       // mysql password
-  database : process.env.DB_NAME,         // mysql 데이터베이스
-  ssl      : {
-    ca   : fs.readFileSync('/home/ubuntu/newcerts/ca.pem'), // should be enough for AWS
-    key  : fs.readFileSync('/home/ubuntu/newcerts/client-key.pem'), // required for google mysql cloud db
-    cert : fs.readFileSync('/home/ubuntu/newcerts/client-cert.pem'), // required for google mysql cloud db
+var connection;
+
+if(process.env.LIVE_ENV == "true"){
+    connection = mysql.createConnection({
+        host: process.env.DB_HOST, // 호스트 주소
+        user: process.env.DB_USER, // mysql user
+        password: process.env.DB_PASS, // mysql password
+        database: process.env.DB_NAME, // mysql 데이터베이스
+        ssl: {
+            ca: fs.readFileSync("/home/ubuntu/newcerts/ca.pem"), // should be enough for AWS
+            key: fs.readFileSync("/home/ubuntu/newcerts/client-key.pem"), // required for google mysql cloud db
+            cert: fs.readFileSync("/home/ubuntu/newcerts/client-cert.pem"), // required for google mysql cloud db
+        },
+    });
+}else{
+    connection = mysql.createConnection({
+        host: process.env.DB_HOST, // 호스트 주소
+        user: process.env.DB_USER, // mysql user
+        password: process.env.DB_PASS, // mysql password
+        database: process.env.DB_NAME, // mysql 데이터베이스
+    });
 }
-});
+
+
 
 // var connection = mysql.createConnection({
 //   host     : 'localhost',    // 호스트 주소

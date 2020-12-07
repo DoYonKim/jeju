@@ -20,7 +20,7 @@ https://medium.com/@bdv111/aws-ec2%EC%97%90%EC%84%9C-nginx%EB%A1%9C-react-%EC%95
 
 ### server
 * http://52.79.237.69:3001/api
-* pm2 start server.js
+* pm2 start sudo server.js
 
 ### ERD
 ![erd](./server/erd/ERD.png)
@@ -32,7 +32,7 @@ https://medium.com/@bdv111/aws-ec2%EC%97%90%EC%84%9C-nginx%EB%A1%9C-react-%EC%95
 ### 터미널 접속
 * ssh -i jeju.pem ubuntu@52.79.160.44 
 
-### src 파일 정의
+### src 파일 정의.
 * Container: 다른 container또는 section을 갖는 최상위 묶음 단위
 * Section: 의미로 구분되는 기능 영역의 구분
 * Component: List를 구성하는 단위
